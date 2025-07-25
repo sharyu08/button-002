@@ -9,16 +9,18 @@
     <style>
         body {
             background: linear-gradient(to right, #654ea3, #eaafc8);
+            margin: 0;
+            font-family: 'Intel One Mono', monospace;
         }
 
         nav {
             display: flex;
             align-items: center;
-            background-color: linear-gradient(to right, #654ea3, #eaafc8);
-            font-family: 'Intel One Mono', monospace;
+            background: linear-gradient(to right, #654ea3, #eaafc8);
             color: white;
             border: 2px solid white;
             border-radius: 10px;
+            overflow-x: auto;
         }
 
         nav ul {
@@ -26,10 +28,19 @@
             flex-direction: row;
             justify-content: space-between;
             align-items: center;
-            width: 100%;
             list-style: none;
             cursor: pointer;
             padding: 0.5rem 1rem;
+            margin: 0;
+            width: 100%;
+            min-width: 500px; /* Prevents items from collapsing on small phones */
+        }
+
+        nav ul li {
+            padding: 1rem;
+            flex: 1;
+            text-align: center;
+            color: white;
         }
 
         .Button_c {
@@ -39,7 +50,7 @@
             margin-top: 300px;
         }
 
-        .Button_c Button {
+        .Button_c button {
             background-color: white;
             color: #654ea3;
             border: 2px solid #654ea3;
@@ -50,29 +61,10 @@
             transition: background-color 0.3s, color 0.3s, transform 0.3s;
         }
 
-        .Button_c Button:hover {
+        .Button_c button:hover {
             background-color: #654ea3;
             color: white;
             transform: scale(1.05);
-        }
-
-    
-        @media screen and (max-width: 600px) {
-            nav ul {
-                flex-direction: column;
-                align-items: flex-start;
-                gap: 10px;
-            }
-
-            .Button_c {
-                margin-top: 150px;
-                padding: 0 1rem;
-            }
-
-            .Button_c Button {
-                width: 100%;
-                text-align: center;
-            }
         }
     </style>
 </head>
